@@ -8,12 +8,10 @@ clone repository: git clone --recursive https://github.com/luizbrito/goFileLoad.
 
 ## Instalação
 
-Execute o comando docker-compose up para o serviço.
+Execute o comando docker-compose up para o serviço, com o parametro --build
+na primeira vez que executar, nas próximas não é necessário.
 
 $ docker-compose up --build
-
-start service:
-$ docker-compose up
 
 ## Exucutando a aplicação
 
@@ -25,11 +23,23 @@ ou utilizando insomnia, neste caso faça uma requisição post passando o arquiv
 
 ### Teste
 
-Para realizar teste pegue um dos arquivos que estão no diretório /tmp/in
+Para realizar teste pegue um dos arquivos valido
+
+Acesse a url http://localhost:2020/upload
+
+clique em "escolher arquivo". 
+
+selecione o arquivo.
+
+clique em upload. 
+
+ao termino deve ser mostrado a mensagem: Successfully Uploaded File
+
 
 ### Execução Local
 
 Acesse o Diretorio local e execute os comandos abaixo:
+
 $ go mod tidy
 $ go run .
 
@@ -42,6 +52,7 @@ Para verificar todos os registros salvos execute no seu client de banco de dados
 SELECT id, cpf, private, incompleto, data_ultima_compra, ticket_medio, ticket_ultima_compra, cnpj_loja_mais_frequente, cnpj_loja_ultima_compra
 FROM public.people;
 
-Para verificar os dados com erro, execute a consulta abaixo:
+Para verificar os registros com erro, execute a consulta abaixo:
 
 SELECT id, chave, message FROM public.error;
+
