@@ -13,7 +13,7 @@ na primeira vez que executar, nas próximas não é necessário.
 
 $ docker-compose up --build
 
-## Exucutando a aplicação
+## Executando a aplicação
 
 Pode ser acessado via tela pela URL :
 
