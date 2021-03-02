@@ -10,7 +10,7 @@ clone repository: git clone --recursive https://github.com/luizbrito/goFileLoad.
 
 Execute o comando docker-compose up para o serviço, com o parametro --build
 na primeira vez que executar, nas próximas não é necessário.
-
+$ cd goFileLoad
 $ docker-compose up --build
 
 ## Executando a aplicação
